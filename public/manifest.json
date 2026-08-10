@@ -1,0 +1,15 @@
+{
+  "short_name": "Profile Viewer",
+  "name": "Profile Viewer — Public Record Lookup",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#161d2c",
+  "background_color": "#e6e9f0"
+}
