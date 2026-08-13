@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { relativeTime } from '../utils/relativeTime';
+import PackageDetailModal from './PackageDetailModal';
 
 function formatDownloads(n) {
     if (n == null) return null;
@@ -11,7 +11,8 @@ function formatDownloads(n) {
 const CopyInstallButton = ({ name }) => {
     const [copied, setCopied] = useState(false);
 
-    const handleCopy = async () => {
+    const handleCopy = async (e) => {
+        e.stopPropagation();
         try {
             await navigator.clipboard.writeText(`npm install ${name}`);
             setCopied(true);
@@ -29,6 +30,8 @@ const CopyInstallButton = ({ name }) => {
 };
 
 const PackageResults = ({ query, packages }) => {
+    const [detailPkg, setDetailPkg] = useState(null);
+
     if (packages.length === 0) {
         return (
             <div className='mini-badge'>
@@ -39,50 +42,46 @@ const PackageResults = ({ query, packages }) => {
     }
 
     return (
-        <ul className='package-list'>
-            {packages.map((pkg) => (
-                <li key={pkg.name} className='package-item'>
-                    <div className='package-head'>
-                        <a href={pkg.npmUrl} target='_blank' rel='noreferrer' className='package-name'>
-                            {pkg.name}
-                        </a>
-                        <span className='package-version'>v{pkg.version}</span>
-                    </div>
-
-                    {pkg.description && <p className='package-desc'>{pkg.description}</p>}
-
-                    {pkg.keywords.length > 0 && (
-                        <div className='package-keywords'>
-                            {pkg.keywords.map((kw) => (
-                                <span key={kw} className='package-keyword'>{kw}</span>
-                            ))}
+        <>
+            <ul className='package-list'>
+                {packages.map((pkg) => (
+                    <li key={pkg.name} className='package-item'>
+                        <div className='package-head'>
+                            <a href={pkg.npmUrl} target='_blank' rel='noreferrer' className='package-name'>
+                                {pkg.name}
+                            </a>
+                            <span className='package-version'>v{pkg.version}</span>
                         </div>
-                    )}
 
-                    <div className='package-meta'>
-                        {pkg.weeklyDownloads != null && (
-                            <span className='package-downloads'>{formatDownloads(pkg.weeklyDownloads)}/wk</span>
+                        {pkg.description && <p className='package-desc'>{pkg.description}</p>}
+
+                        {pkg.keywords.length > 0 && (
+                            <div className='package-keywords'>
+                                {pkg.keywords.map((kw) => (
+                                    <span key={kw} className='package-keyword'>{kw}</span>
+                                ))}
+                            </div>
                         )}
-                        {pkg.license && <span className='package-license'>{pkg.license}</span>}
-                        {pkg.publisher && <span className='package-publisher'>by {pkg.publisher}</span>}
-                        {pkg.updatedAt && <span className='package-updated'>updated {relativeTime(pkg.updatedAt)}</span>}
-                    </div>
 
-                    {(pkg.homepageUrl || pkg.repositoryUrl) && (
-                        <div className='package-links'>
-                            {pkg.homepageUrl && (
-                                <a href={pkg.homepageUrl} target='_blank' rel='noreferrer'>Homepage ↗</a>
+                        <div className='package-meta'>
+                            {pkg.weeklyDownloads != null && (
+                                <span className='package-downloads'>{formatDownloads(pkg.weeklyDownloads)}/wk</span>
                             )}
-                            {pkg.repositoryUrl && (
-                                <a href={pkg.repositoryUrl} target='_blank' rel='noreferrer'>Repo ↗</a>
-                            )}
+                            {pkg.license && <span className='package-license'>{pkg.license}</span>}
                         </div>
-                    )}
 
-                    <CopyInstallButton name={pkg.name} />
-                </li>
-            ))}
-        </ul>
+                        <div className='package-actions'>
+                            <button type='button' className='package-details-btn' onClick={() => setDetailPkg(pkg)}>
+                                Details
+                            </button>
+                            <CopyInstallButton name={pkg.name} />
+                        </div>
+                    </li>
+                ))}
+            </ul>
+
+            {detailPkg && <PackageDetailModal pkg={detailPkg} onClose={() => setDetailPkg(null)} />}
+        </>
     );
 };
 

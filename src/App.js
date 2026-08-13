@@ -35,12 +35,9 @@ function App() {
 
     return (
         <div className='App'>
+            <ThemeToggle theme={theme} onChange={setTheme} />
             <div className={`page${mode === 'packages' ? ' page-wide' : ''}`}>
                 <div className='page-head'>
-                    <div className='top-bar'>
-                        <ThemeToggle theme={theme} onChange={setTheme} />
-                    </div>
-
                     <header className='hero'>
                         <span className='eyebrow'>Public Record Lookup</span>
                         <h1>Profile Viewer</h1>
@@ -103,6 +100,10 @@ function App() {
                         </>
                     )}
                 </div>
+
+                <footer className='site-footer'>
+                    © {new Date().getFullYear()} Nilesh Chikhle
+                </footer>
             </div>
         </div>
     );
