@@ -23,7 +23,9 @@ function saveRecent(list) {
 
 function syncUrl(handle) {
     const url = new URL(window.location.href);
+    url.searchParams.set('mode', 'person');
     url.searchParams.set('u', handle);
+    url.searchParams.delete('q');
     window.history.replaceState(null, '', url);
 }
 
@@ -65,8 +67,9 @@ export function useProfileSearch() {
     };
 
     useEffect(() => {
-        const sharedHandle = new URLSearchParams(window.location.search).get('u');
-        if (sharedHandle) {
+        const params = new URLSearchParams(window.location.search);
+        const sharedHandle = params.get('u');
+        if (sharedHandle && params.get('mode') !== 'packages') {
             search(sharedHandle);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -1,6 +1,15 @@
 import React from 'react';
 
-const SearchBar = ({ value, onChange, onSubmit, isLoading, placeholder }) => {
+const SearchBar = ({
+    value,
+    onChange,
+    onSubmit,
+    isLoading,
+    placeholder,
+    label = 'Enter Handle',
+    actionLabel = 'Pull Record',
+    loadingLabel = 'Pulling...',
+}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(value);
@@ -8,7 +17,7 @@ const SearchBar = ({ value, onChange, onSubmit, isLoading, placeholder }) => {
 
     return (
         <div className='search-rail'>
-            <span className='field-label'>Enter Handle</span>
+            <span className='field-label'>{label}</span>
             <form onSubmit={handleSubmit} className='scan-slot'>
                 <input
                     type='text'
@@ -17,7 +26,7 @@ const SearchBar = ({ value, onChange, onSubmit, isLoading, placeholder }) => {
                     onChange={(e) => onChange(e.target.value)}
                 />
                 <button type='submit' disabled={isLoading}>
-                    {isLoading ? 'Pulling...' : 'Pull Record'}
+                    {isLoading ? loadingLabel : actionLabel}
                 </button>
             </form>
         </div>

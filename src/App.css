@@ -56,6 +56,41 @@ body {
     padding: 56px 20px 80px;
 }
 
+/* ---------- top bar / theme toggle ---------- */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.theme-toggle {
+    display: flex;
+    gap: 2px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    background: var(--panel);
+}
+
+.theme-btn {
+    border: none;
+    background: transparent;
+    color: var(--ink-dim);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.theme-btn.active {
+    background: var(--accent);
+    color: var(--accent-ink);
+}
+
 /* ---------- header ---------- */
 .hero {
     display: flex;
@@ -63,7 +98,7 @@ body {
     align-items: center;
     gap: 6px;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
 }
 
 .eyebrow {
@@ -80,6 +115,34 @@ body {
     font-size: 32px;
     font-weight: 700;
     margin: 0;
+}
+
+/* ---------- mode switch ---------- */
+.mode-switch {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.mode-tab {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--ink-dim);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.mode-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
 }
 
 /* ---------- search rail ---------- */
@@ -394,6 +457,85 @@ body {
     color: var(--ink-dim);
     text-align: center;
     word-break: break-all;
+}
+
+/* ---------- package results ---------- */
+.package-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.package-item {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+
+.package-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.package-name {
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.package-name:hover {
+    color: var(--accent);
+}
+
+.package-version {
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 10.5px;
+    color: var(--ink-dim);
+    white-space: nowrap;
+}
+
+.package-desc {
+    margin: 6px 0 0;
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    line-height: 1.5;
+}
+
+.package-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 10.5px;
+}
+
+.package-meta .package-downloads {
+    color: var(--accent);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.package-meta .package-license {
+    color: var(--ink-dim);
+}
+
+.package-meta a {
+    color: var(--ink-dim);
+    text-decoration: none;
+}
+
+.package-meta a:hover {
+    color: var(--accent);
 }
 
 /* ---------- idle / loading / error ---------- */

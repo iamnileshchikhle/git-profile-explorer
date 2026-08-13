@@ -1,10 +1,10 @@
 import React from 'react';
 
-const EmptyState = () => (
+const EmptyState = ({ message = 'Enter a handle to pull their public record.' }) => (
     <div className='mini-badge'>
         <div className='mini-photo' />
         <div className='mini-line short' />
-        <p className='mini-hint'>Enter a handle to pull their public record.</p>
+        <p className='mini-hint'>{message}</p>
     </div>
 );
 
