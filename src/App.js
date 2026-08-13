@@ -35,62 +35,74 @@ function App() {
 
     return (
         <div className='App'>
-            <div className='page'>
-                <div className='top-bar'>
-                    <ThemeToggle theme={theme} onChange={setTheme} />
+            <div className={`page${mode === 'packages' ? ' page-wide' : ''}`}>
+                <div className='page-head'>
+                    <div className='top-bar'>
+                        <ThemeToggle theme={theme} onChange={setTheme} />
+                    </div>
+
+                    <header className='hero'>
+                        <span className='eyebrow'>Public Record Lookup</span>
+                        <h1>Profile Viewer</h1>
+                    </header>
+
+                    <ModeSwitch activeId={mode} onSelect={selectMode} />
+
+                    {mode === 'person' ? (
+                        <>
+                            <SearchBar
+                                value={person.query}
+                                onChange={person.setQuery}
+                                onSubmit={person.search}
+                                isLoading={person.status === 'loading'}
+                                placeholder={person.provider.placeholder}
+                                label='Enter Handle'
+                                actionLabel='Pull Record'
+                                loadingLabel='Pulling...'
+                            />
+                            <RecentSearches items={person.recentSearches} onSelect={person.search} />
+                            <RateLimitNote rateLimit={person.rateLimit} />
+                        </>
+                    ) : (
+                        <>
+                            <SearchBar
+                                value={pkgs.query}
+                                onChange={pkgs.setQuery}
+                                onSubmit={pkgs.search}
+                                isLoading={pkgs.status === 'loading'}
+                                placeholder='react'
+                                label='Search Packages'
+                                actionLabel='Search'
+                                loadingLabel='Searching...'
+                            />
+                            <RecentSearches items={pkgs.recentSearches} onSelect={pkgs.search} prefix='' />
+                        </>
+                    )}
                 </div>
 
-                <header className='hero'>
-                    <span className='eyebrow'>Public Record Lookup</span>
-                    <h1>Profile Viewer</h1>
-                </header>
-
-                <ModeSwitch activeId={mode} onSelect={selectMode} />
-
-                {mode === 'person' ? (
-                    <>
-                        <SearchBar
-                            value={person.query}
-                            onChange={person.setQuery}
-                            onSubmit={person.search}
-                            isLoading={person.status === 'loading'}
-                            placeholder={person.provider.placeholder}
-                            label='Enter Handle'
-                            actionLabel='Pull Record'
-                            loadingLabel='Pulling...'
-                        />
-                        <RecentSearches items={person.recentSearches} onSelect={person.search} />
-                        <RateLimitNote rateLimit={person.rateLimit} />
-
-                        {person.status === 'idle' && (
-                            <EmptyState message='Enter a handle to pull their public record.' />
-                        )}
-                        {person.status === 'loading' && <LoadingState message='Scanning record...' />}
-                        {person.status === 'error' && <ErrorState message={person.errorMessage} />}
-                        {person.status === 'success' && person.profile && <ProfileCard profile={person.profile} />}
-                    </>
-                ) : (
-                    <>
-                        <SearchBar
-                            value={pkgs.query}
-                            onChange={pkgs.setQuery}
-                            onSubmit={pkgs.search}
-                            isLoading={pkgs.status === 'loading'}
-                            placeholder='react'
-                            label='Search Packages'
-                            actionLabel='Search'
-                            loadingLabel='Searching...'
-                        />
-                        <RecentSearches items={pkgs.recentSearches} onSelect={pkgs.search} prefix='' />
-
-                        {pkgs.status === 'idle' && (
-                            <EmptyState message='Search for a package, library, or tool.' />
-                        )}
-                        {pkgs.status === 'loading' && <LoadingState message='Searching npm...' />}
-                        {pkgs.status === 'error' && <ErrorState message={pkgs.errorMessage} />}
-                        {pkgs.status === 'success' && <PackageResults query={pkgs.query} packages={pkgs.results} />}
-                    </>
-                )}
+                <div className='page-body'>
+                    {mode === 'person' ? (
+                        <>
+                            {person.status === 'idle' && (
+                                <EmptyState message='Enter a handle to pull their public record.' />
+                            )}
+                            {person.status === 'loading' && <LoadingState message='Scanning record...' />}
+                            {person.status === 'error' && <ErrorState message={person.errorMessage} />}
+                            {person.status === 'success' && person.profile && <ProfileCard profile={person.profile} />}
+                        </>
+                    ) : (
+                        <>
+                            {pkgs.status === 'idle' && (
+                                <EmptyState message='Search for a package, library, or tool.' />
+                            )}
+                            {pkgs.status === 'loading' && <LoadingState message='Searching npm...' />}
+                            {pkgs.status === 'error' && <ErrorState message={pkgs.errorMessage} />}
+                            {pkgs.status === 'success' && (
+                                <PackageResults query={pkgs.query} packages={pkgs.results} />
+                            )}
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     );

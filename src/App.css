@@ -54,6 +54,26 @@ body {
     width: 100%;
     max-width: 520px;
     padding: 56px 20px 80px;
+    transition: max-width 0.2s ease;
+}
+
+.page.page-wide {
+    max-width: 1080px;
+}
+
+.page-head {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.page-body {
+    margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 32px 16px 56px;
+    }
 }
 
 /* ---------- top bar / theme toggle ---------- */
@@ -464,9 +484,10 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    align-items: start;
 }
 
 .package-item {
@@ -474,6 +495,8 @@ body {
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
 }
 
 .package-head {
@@ -509,14 +532,32 @@ body {
     line-height: 1.5;
 }
 
+.package-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.package-keyword {
+    background: var(--paper);
+    color: var(--ink-dim);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.02em;
+}
+
 .package-meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
+    gap: 10px 12px;
     margin-top: 10px;
     font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
     font-size: 10.5px;
+    color: var(--ink-dim);
 }
 
 .package-meta .package-downloads {
@@ -525,16 +566,40 @@ body {
     font-variant-numeric: tabular-nums;
 }
 
-.package-meta .package-license {
-    color: var(--ink-dim);
+.package-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 10.5px;
 }
 
-.package-meta a {
+.package-links a {
     color: var(--ink-dim);
     text-decoration: none;
 }
 
-.package-meta a:hover {
+.package-links a:hover {
+    color: var(--accent);
+}
+
+.package-copy {
+    margin-top: 12px;
+    width: 100%;
+    text-align: left;
+    background: var(--paper);
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 11px;
+    color: var(--ink-dim);
+    cursor: pointer;
+}
+
+.package-copy:hover {
+    border-color: var(--accent);
     color: var(--accent);
 }
 
