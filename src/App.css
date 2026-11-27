@@ -817,6 +817,11 @@ body {
 
 /* ---------- footer ---------- */
 .site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     margin-top: 40px;
     padding-top: 16px;
     border-top: 1px solid var(--line);
@@ -824,4 +829,234 @@ body {
     font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
     font-size: 10.5px;
     color: var(--ink-dim);
+}
+
+.site-footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- GitHub Trending ---------- */
+.trending-board {
+    width: 100%;
+}
+
+.trending-intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.trending-intro h2,
+.trending-category h3 {
+    margin: 0;
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    color: var(--ink);
+}
+
+.trending-intro h2 {
+    font-size: 24px;
+}
+
+.trending-intro p,
+.trending-source-note {
+    margin: 6px 0 0;
+    color: var(--ink-dim);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.trending-intro > a {
+    flex: 0 0 auto;
+    color: var(--accent);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.trending-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.trending-search {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    padding: 10px 12px;
+    background: var(--panel);
+    color: var(--ink);
+    font: inherit;
+    font-size: 12px;
+}
+
+.trending-search::placeholder {
+    color: var(--ink-dim);
+}
+
+.trending-search:focus {
+    border-color: var(--accent);
+    outline: 2px solid color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.trending-control-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.trending-filter {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 11px;
+    background: var(--panel);
+    color: var(--ink-dim);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.trending-filter.active {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 700;
+}
+
+.trending-source-note {
+    margin-bottom: 18px;
+}
+
+.trending-category {
+    margin-top: 24px;
+}
+
+.trending-category h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    align-items: stretch;
+}
+
+.trending-card {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+}
+
+.trending-card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.trending-repo-name {
+    min-width: 0;
+    color: var(--ink);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.trending-repo-name:hover {
+    color: var(--accent);
+}
+
+.trending-stars {
+    flex: 0 0 auto;
+    color: var(--accent);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 10.5px;
+    font-variant-numeric: tabular-nums;
+}
+
+.trending-description {
+    min-height: 38px;
+    margin: 9px 0 12px;
+    color: var(--ink-dim);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.trending-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--ink-dim);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.trending-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.trending-tag {
+    border-radius: 4px;
+    padding: 3px 7px;
+    background: var(--paper);
+    color: var(--ink-dim);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+    font-size: 9.5px;
+}
+
+.trending-unavailable {
+    color: var(--ink-dim);
+    font-size: 11px;
+    font-style: italic;
+}
+
+.trending-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 13px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-dim);
+    font-size: 10.5px;
+}
+
+.trending-message {
+    padding: 24px;
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    color: var(--ink-dim);
+    text-align: center;
+    font-size: 13px;
+}
+
+.trending-error {
+    color: var(--err);
+}
+
+@media (max-width: 640px) {
+    .trending-intro {
+        flex-direction: column;
+    }
+
+    .trending-description {
+        min-height: 0;
+    }
 }

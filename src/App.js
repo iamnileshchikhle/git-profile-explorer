@@ -6,6 +6,7 @@ import RecentSearches from './components/RecentSearches';
 import RateLimitNote from './components/RateLimitNote';
 import ProfileCard from './components/ProfileCard';
 import PackageResults from './components/PackageResults';
+import TrendingProjects from './components/TrendingProjects';
 import EmptyState from './components/EmptyState';
 import LoadingState from './components/LoadingState';
 import ErrorState from './components/ErrorState';
@@ -15,7 +16,8 @@ import { useTheme } from './hooks/useTheme';
 import './App.css';
 
 function initialMode() {
-    return new URLSearchParams(window.location.search).get('mode') === 'packages' ? 'packages' : 'person';
+    const mode = new URLSearchParams(window.location.search).get('mode');
+    return ['packages', 'trending'].includes(mode) ? mode : 'person';
 }
 
 function App() {
@@ -36,16 +38,16 @@ function App() {
     return (
         <div className='App'>
             <ThemeToggle theme={theme} onChange={setTheme} />
-            <div className={`page${mode === 'packages' ? ' page-wide' : ''}`}>
+            <div className={`page${mode !== 'person' ? ' page-wide' : ''}`}>
                 <div className='page-head'>
                     <header className='hero'>
-                        <span className='eyebrow'>Public Record Lookup</span>
+                        <span className='eyebrow'>Developer Search &amp; Discovery</span>
                         <h1>Git Profile Explorer</h1>
                     </header>
 
                     <ModeSwitch activeId={mode} onSelect={selectMode} />
 
-                    {mode === 'person' ? (
+                    {mode === 'person' && (
                         <>
                             <SearchBar
                                 value={person.query}
@@ -60,7 +62,8 @@ function App() {
                             <RecentSearches items={person.recentSearches} onSelect={person.search} />
                             <RateLimitNote rateLimit={person.rateLimit} />
                         </>
-                    ) : (
+                    )}
+                    {mode === 'packages' && (
                         <>
                             <SearchBar
                                 value={pkgs.query}
@@ -78,7 +81,7 @@ function App() {
                 </div>
 
                 <div className='page-body'>
-                    {mode === 'person' ? (
+                    {mode === 'person' && (
                         <>
                             {person.status === 'idle' && (
                                 <EmptyState message='Enter a handle to pull their public record.' />
@@ -87,7 +90,8 @@ function App() {
                             {person.status === 'error' && <ErrorState message={person.errorMessage} />}
                             {person.status === 'success' && person.profile && <ProfileCard profile={person.profile} />}
                         </>
-                    ) : (
+                    )}
+                    {mode === 'packages' && (
                         <>
                             {pkgs.status === 'idle' && (
                                 <EmptyState message='Search for a package, library, or tool.' />
@@ -99,10 +103,14 @@ function App() {
                             )}
                         </>
                     )}
+                    {mode === 'trending' && <TrendingProjects />}
                 </div>
 
                 <footer className='site-footer'>
-                    © {new Date().getFullYear()} Nilesh Chikhle
+                    <span>© {new Date().getFullYear()} Nilesh Chikhle. Built with React, JavaScript &amp; Node.js.</span>
+                    <a href='https://github.com/iamnileshchikhle' target='_blank' rel='noreferrer'>
+                        GitHub
+                    </a>
                 </footer>
             </div>
         </div>

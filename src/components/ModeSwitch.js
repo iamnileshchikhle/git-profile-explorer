@@ -3,6 +3,7 @@ import React from 'react';
 const MODES = [
     { id: 'person', label: 'Person' },
     { id: 'packages', label: 'Packages' },
+    { id: 'trending', label: 'Trending' },
 ];
 
 const ModeSwitch = ({ activeId, onSelect }) => (

@@ -17,6 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:trending": "node --test scripts/update-trending.test.js",
+    "update-trending": "node scripts/update-trending.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

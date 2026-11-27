@@ -1,0 +1,749 @@
+{
+  "source": "GitHub Trending",
+  "generatedAt": "2026-11-27T20:15:40.985Z",
+  "categoryNote": "Categories are inferred from repository descriptions and GitHub topics.",
+  "scopeNote": "Repositories whose public metadata identifies explicit offensive-security or malware tooling are omitted.",
+  "periods": {
+    "daily": {
+      "label": "Daily",
+      "starsLabel": "today",
+      "sourceUrl": "https://github.com/trending?since=daily",
+      "projects": [
+        {
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra/superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "description": "An agentic skills framework & software development methodology that works.",
+          "primaryLanguage": "Shell",
+          "stars": 328206,
+          "starsInPeriod": 916,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "HKUDS",
+          "name": "CLI-Anything",
+          "fullName": "HKUDS/CLI-Anything",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+          "primaryLanguage": "Python",
+          "stars": 66907,
+          "starsInPeriod": 668,
+          "topics": null,
+          "category": {
+            "id": "developer-tools",
+            "label": "Developer tools"
+          }
+        },
+        {
+          "owner": "jingyaogong",
+          "name": "minimind",
+          "fullName": "jingyaogong/minimind",
+          "url": "https://github.com/jingyaogong/minimind",
+          "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+          "primaryLanguage": "Python",
+          "stars": 72166,
+          "starsInPeriod": 667,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "cursor",
+          "name": "plugins",
+          "fullName": "cursor/plugins",
+          "url": "https://github.com/cursor/plugins",
+          "description": "Cursor plugin specification and official plugins",
+          "primaryLanguage": "TypeScript",
+          "stars": 19979,
+          "starsInPeriod": 242,
+          "topics": null,
+          "category": {
+            "id": "developer-tools",
+            "label": "Developer tools"
+          }
+        },
+        {
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "fullName": "firecrawl/firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+          "primaryLanguage": "TypeScript",
+          "stars": 211569,
+          "starsInPeriod": 833,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "nginx",
+          "name": "nginx",
+          "fullName": "nginx/nginx",
+          "url": "https://github.com/nginx/nginx",
+          "description": "The official NGINX Open Source repository.",
+          "primaryLanguage": "C",
+          "stars": 33649,
+          "starsInPeriod": 148,
+          "topics": null,
+          "category": {
+            "id": "infrastructure",
+            "label": "Infrastructure"
+          }
+        },
+        {
+          "owner": "openvinotoolkit",
+          "name": "openvino",
+          "fullName": "openvinotoolkit/openvino",
+          "url": "https://github.com/openvinotoolkit/openvino",
+          "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+          "primaryLanguage": "C++",
+          "stars": 12928,
+          "starsInPeriod": 152,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "cathrynlavery",
+          "name": "diagram-design",
+          "fullName": "cathrynlavery/diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+          "primaryLanguage": "HTML",
+          "stars": 74381,
+          "starsInPeriod": 731,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn/last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+          "primaryLanguage": "Python",
+          "stars": 76291,
+          "starsInPeriod": 664,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "google-labs-code",
+          "name": "stitch-skills",
+          "fullName": "google-labs-code/stitch-skills",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+          "primaryLanguage": "TypeScript",
+          "stars": 13542,
+          "starsInPeriod": 311,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "mjmirza",
+          "name": "app-store-compliance",
+          "fullName": "mjmirza/app-store-compliance",
+          "url": "https://github.com/mjmirza/app-store-compliance",
+          "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+          "primaryLanguage": "Shell",
+          "stars": 7765,
+          "starsInPeriod": 531,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "Tracer-Cloud",
+          "name": "opensre",
+          "fullName": "Tracer-Cloud/opensre",
+          "url": "https://github.com/Tracer-Cloud/opensre",
+          "description": "The open-source agent for CI/CD reliability.",
+          "primaryLanguage": "Python",
+          "stars": 16084,
+          "starsInPeriod": 326,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "toeverything",
+          "name": "AFFiNE",
+          "fullName": "toeverything/AFFiNE",
+          "url": "https://github.com/toeverything/AFFiNE",
+          "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
+          "primaryLanguage": "TypeScript",
+          "stars": 79370,
+          "starsInPeriod": 469,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "XiaoYouChR",
+          "name": "Ghost-Downloader-3",
+          "fullName": "XiaoYouChR/Ghost-Downloader-3",
+          "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+          "description": "The only downloader you need. 下载器的集大成者。",
+          "primaryLanguage": "Python",
+          "stars": 19769,
+          "starsInPeriod": 843,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "zhouxiaoka",
+          "name": "autoclip",
+          "fullName": "zhouxiaoka/autoclip",
+          "url": "https://github.com/zhouxiaoka/autoclip",
+          "description": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+          "primaryLanguage": "Python",
+          "stars": 17527,
+          "starsInPeriod": 733,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        }
+      ]
+    },
+    "weekly": {
+      "label": "Weekly",
+      "starsLabel": "this week",
+      "sourceUrl": "https://github.com/trending?since=weekly",
+      "projects": [
+        {
+          "owner": "backnotprop",
+          "name": "plannotator",
+          "fullName": "backnotprop/plannotator",
+          "url": "https://github.com/backnotprop/plannotator",
+          "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+          "primaryLanguage": "TypeScript",
+          "stars": 15400,
+          "starsInPeriod": 1631,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "google-labs-code",
+          "name": "stitch-skills",
+          "fullName": "google-labs-code/stitch-skills",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+          "primaryLanguage": "TypeScript",
+          "stars": 13542,
+          "starsInPeriod": 2619,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "GoogleChrome",
+          "name": "modern-web-guidance-src",
+          "fullName": "GoogleChrome/modern-web-guidance-src",
+          "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+          "description": "Keep your coding agent up to date with the latest web best practices",
+          "primaryLanguage": "TypeScript",
+          "stars": 11428,
+          "starsInPeriod": 2209,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "n8n-io",
+          "name": "nod",
+          "fullName": "n8n-io/nod",
+          "url": "https://github.com/n8n-io/nod",
+          "description": "Open source personal agent with its own computer. It chases invoices, preps your calls and cancels trials on real websites, and asks before it acts. Runs on your machine with the model you choose. By n8n.",
+          "primaryLanguage": "TypeScript",
+          "stars": 4253,
+          "starsInPeriod": 1165,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "fullName": "alibaba/open-code-review",
+          "url": "https://github.com/alibaba/open-code-review",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "primaryLanguage": "Go",
+          "stars": 56874,
+          "starsInPeriod": 2284,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn/last30days-skill",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+          "primaryLanguage": "Python",
+          "stars": 76291,
+          "starsInPeriod": 5090,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "ChromeDevTools",
+          "name": "chrome-devtools-mcp",
+          "fullName": "ChromeDevTools/chrome-devtools-mcp",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "description": "Chrome DevTools for coding agents",
+          "primaryLanguage": "TypeScript",
+          "stars": 59610,
+          "starsInPeriod": 1175,
+          "topics": null,
+          "category": {
+            "id": "developer-tools",
+            "label": "Developer tools"
+          }
+        },
+        {
+          "owner": "tradermonty",
+          "name": "claude-trading-skills",
+          "fullName": "tradermonty/claude-trading-skills",
+          "url": "https://github.com/tradermonty/claude-trading-skills",
+          "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+          "primaryLanguage": "Python",
+          "stars": 8712,
+          "starsInPeriod": 1381,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "ag-ui-protocol",
+          "name": "ag-ui",
+          "fullName": "ag-ui-protocol/ag-ui",
+          "url": "https://github.com/ag-ui-protocol/ag-ui",
+          "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+          "primaryLanguage": "TypeScript",
+          "stars": 21933,
+          "starsInPeriod": 1269,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "meta",
+          "name": "astryx",
+          "fullName": "meta/astryx",
+          "url": "https://github.com/meta/astryx",
+          "description": "An open source design system that's fully customizable and agent ready",
+          "primaryLanguage": "TypeScript",
+          "stars": 33510,
+          "starsInPeriod": 2519,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "pookjw",
+          "name": "HermesEnabler",
+          "fullName": "pookjw/HermesEnabler",
+          "url": "https://github.com/pookjw/HermesEnabler",
+          "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+          "primaryLanguage": "Objective-C",
+          "stars": 2574,
+          "starsInPeriod": 325,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "we-promise",
+          "name": "sure",
+          "fullName": "we-promise/sure",
+          "url": "https://github.com/we-promise/sure",
+          "description": "The personal finance app for everyone (by everyone)",
+          "primaryLanguage": "Ruby",
+          "stars": 18200,
+          "starsInPeriod": 1430,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "obsidianmd",
+          "name": "obsidian-skills",
+          "fullName": "obsidianmd/obsidian-skills",
+          "url": "https://github.com/obsidianmd/obsidian-skills",
+          "description": "Teach your agent to use Obsidian and open formats including Markdown, Bases, JSON Canvas.",
+          "primaryLanguage": "Shell",
+          "stars": 54291,
+          "starsInPeriod": 704,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "dream-num",
+          "name": "univer",
+          "fullName": "dream-num/univer",
+          "url": "https://github.com/dream-num/univer",
+          "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+          "primaryLanguage": "TypeScript",
+          "stars": 32041,
+          "starsInPeriod": 1825,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "kajisho5",
+          "name": "ffmpeg-skill",
+          "fullName": "kajisho5/ffmpeg-skill",
+          "url": "https://github.com/kajisho5/ffmpeg-skill",
+          "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+          "primaryLanguage": "Python",
+          "stars": 11846,
+          "starsInPeriod": 3229,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        }
+      ]
+    },
+    "monthly": {
+      "label": "Monthly",
+      "starsLabel": "this month",
+      "sourceUrl": "https://github.com/trending?since=monthly",
+      "projects": [
+        {
+          "owner": "Nutlope",
+          "name": "hallmark",
+          "fullName": "Nutlope/hallmark",
+          "url": "https://github.com/Nutlope/hallmark",
+          "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+          "primaryLanguage": "CSS",
+          "stars": 62029,
+          "starsInPeriod": 26738,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "cloudflare",
+          "name": "security-audit-skill",
+          "fullName": "cloudflare/security-audit-skill",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+          "primaryLanguage": "JavaScript",
+          "stars": 79212,
+          "starsInPeriod": 31165,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "milind-soni",
+          "name": "OpenMausBot",
+          "fullName": "milind-soni/OpenMausBot",
+          "url": "https://github.com/milind-soni/OpenMausBot",
+          "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+          "primaryLanguage": "TypeScript",
+          "stars": 28516,
+          "starsInPeriod": 22590,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "pingdotgg",
+          "name": "t3code",
+          "fullName": "pingdotgg/t3code",
+          "url": "https://github.com/pingdotgg/t3code",
+          "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+          "primaryLanguage": "TypeScript",
+          "stars": 82045,
+          "starsInPeriod": 50354,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "anthropics",
+          "name": "skills",
+          "fullName": "anthropics/skills",
+          "url": "https://github.com/anthropics/skills",
+          "description": "Public repository for Agent Skills",
+          "primaryLanguage": "Python",
+          "stars": 201418,
+          "starsInPeriod": 17538,
+          "topics": null,
+          "category": {
+            "id": "developer-tools",
+            "label": "Developer tools"
+          }
+        },
+        {
+          "owner": "thedotmack",
+          "name": "claude-mem",
+          "fullName": "thedotmack/claude-mem",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+          "primaryLanguage": "TypeScript",
+          "stars": 120184,
+          "starsInPeriod": 17325,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "Jakeschincariol",
+          "name": "instagram-agent-skill",
+          "fullName": "Jakeschincariol/instagram-agent-skill",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill",
+          "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
+          "primaryLanguage": "Python",
+          "stars": 9831,
+          "starsInPeriod": 6511,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "backnotprop",
+          "name": "plannotator",
+          "fullName": "backnotprop/plannotator",
+          "url": "https://github.com/backnotprop/plannotator",
+          "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+          "primaryLanguage": "TypeScript",
+          "stars": 15400,
+          "starsInPeriod": 5601,
+          "topics": null,
+          "category": {
+            "id": "web-development",
+            "label": "Web development"
+          }
+        },
+        {
+          "owner": "Ebony-Vinyl",
+          "name": "dsh-our-free-model",
+          "fullName": "Ebony-Vinyl/dsh-our-free-model",
+          "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+          "description": "在 dsh 里装上这个插件即可，无需登录、注册或填 API Key，就能使用包括 DeepSeek V4.1 Flash、Kimi K3 在内的前沿模型——完全免费，不限量。 All you do is install this plugin in dsh: no login, no sign-up, no API key — the frontier models are just there, DeepSeek V4.1 Flash and Kimi K3 among them. Completely free, with no usage cap.",
+          "primaryLanguage": "JavaScript",
+          "stars": 89072,
+          "starsInPeriod": 46809,
+          "topics": null,
+          "category": {
+            "id": "developer-tools",
+            "label": "Developer tools"
+          }
+        },
+        {
+          "owner": "HKUDS",
+          "name": "DeepTutor",
+          "fullName": "HKUDS/DeepTutor",
+          "url": "https://github.com/HKUDS/DeepTutor",
+          "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
+          "primaryLanguage": "Python",
+          "stars": 63758,
+          "starsInPeriod": 20206,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "yetone",
+          "name": "magpie",
+          "fullName": "yetone/magpie",
+          "url": "https://github.com/yetone/magpie",
+          "description": "Pool every plan you pay for — Claude, ChatGPT, Copilot, GLM Coding Plan, Kimi Code and more — and use them in any agent: Claude Code, Codex, Claude Desktop… When one runs out, the next takes over.",
+          "primaryLanguage": "Go",
+          "stars": 42491,
+          "starsInPeriod": 20130,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "fullName": "pbakaus/impeccable",
+          "url": "https://github.com/pbakaus/impeccable",
+          "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+          "primaryLanguage": "Rust",
+          "stars": 117990,
+          "starsInPeriod": 29366,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "sherlock-project",
+          "name": "sherlock",
+          "fullName": "sherlock-project/sherlock",
+          "url": "https://github.com/sherlock-project/sherlock",
+          "description": "Hunt down social media accounts by username across social networks",
+          "primaryLanguage": "Python",
+          "stars": 118506,
+          "starsInPeriod": 23328,
+          "topics": null,
+          "category": {
+            "id": "other",
+            "label": "Other"
+          }
+        },
+        {
+          "owner": "AgriciDaniel",
+          "name": "claude-seo",
+          "fullName": "AgriciDaniel/claude-seo",
+          "url": "https://github.com/AgriciDaniel/claude-seo",
+          "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+          "primaryLanguage": "Python",
+          "stars": 32839,
+          "starsInPeriod": 10958,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "google-labs-code",
+          "name": "stitch-skills",
+          "fullName": "google-labs-code/stitch-skills",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+          "primaryLanguage": "TypeScript",
+          "stars": 13542,
+          "starsInPeriod": 4609,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "heygen-com",
+          "name": "hyperframes",
+          "fullName": "heygen-com/hyperframes",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "description": "Open-source AI video editor: edit your own footage, or create and remake any video with Claude Code, Codex or the free Studio app. Write HTML, render MP4. By HeyGen.",
+          "primaryLanguage": "TypeScript",
+          "stars": 91436,
+          "starsInPeriod": 18292,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "kajisho5",
+          "name": "ffmpeg-skill",
+          "fullName": "kajisho5/ffmpeg-skill",
+          "url": "https://github.com/kajisho5/ffmpeg-skill",
+          "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+          "primaryLanguage": "Python",
+          "stars": 11846,
+          "starsInPeriod": 8408,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        },
+        {
+          "owner": "vercel-labs",
+          "name": "agent-browser",
+          "fullName": "vercel-labs/agent-browser",
+          "url": "https://github.com/vercel-labs/agent-browser",
+          "description": "Browser automation CLI for AI agents",
+          "primaryLanguage": "Rust",
+          "stars": 54308,
+          "starsInPeriod": 9648,
+          "topics": null,
+          "category": {
+            "id": "ai",
+            "label": "AI"
+          }
+        }
+      ]
+    }
+  }
+}

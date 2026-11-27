@@ -12,6 +12,7 @@ A React app for looking up a public GitHub profile by username, rendered as an I
 - **Shareable lookups** — searching updates the URL to `?u=<handle>`; opening that link re-runs the search automatically
 - **Recent searches** — the last 6 lookups are saved to `localStorage` and shown as clickable chips
 - **Live rate-limit readout** — shows remaining GitHub API requests for the hour, read from GitHub's response headers, so a failed search is explained instead of mysterious
+- **GitHub Trending** — daily, weekly, and monthly repository snapshots grouped by inferred category, with GitHub star gains, current stars, descriptions, languages, and repository topics
 - Responsive layout, light/dark theme support
 
 ## Tech Stack
@@ -19,6 +20,7 @@ A React app for looking up a public GitHub profile by username, rendered as an I
 - React 18 (Create React App)
 - Axios
 - react-icons
+- GitHub Trending pages and GitHub REST API
 
 ## Project Structure
 
@@ -60,6 +62,8 @@ Open http://localhost:3000 in your browser.
 ## Deployment base URL
 
 The GitHub Pages base URL is configured once in `.env.production` as `PUBLIC_URL`. Create React App uses it when generating asset paths and the production build. If the deployment URL or repository path changes, update that value and rebuild.
+
+The Pages workflow refreshes the GitHub Trending snapshot daily before building. Run `npm run update-trending` to refresh it locally; `npm run test:trending` checks the page parser and category mapping.
 
 ## Notes
 
