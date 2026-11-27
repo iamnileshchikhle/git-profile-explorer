@@ -1,4 +1,4 @@
-# Profile Viewer
+# Git Profile Explorer
 
 A React app for looking up a public GitHub profile by username, rendered as an ID-badge-style record. Built around a provider adapter (`providers/githubProvider.js`) so a second platform can be added later without touching the UI, but only GitHub is wired up today.
 
@@ -49,13 +49,17 @@ Adding a new platform means writing a new file in `providers/` that maps that pl
 ## Getting Started
 
 ```bash
-git clone <your-repository-url>
-cd GitHub-Profile-Search-App-Using-React-JS
+git clone https://github.com/iamnileshchikhle/git-profile-explorer.git
+cd git-profile-explorer
 npm install
 npm start
 ```
 
 Open http://localhost:3000 in your browser.
+
+## Deployment base URL
+
+The GitHub Pages base URL is configured once in `.env.production` as `PUBLIC_URL`. Create React App uses it when generating asset paths and the production build. If the deployment URL or repository path changes, update that value and rebuild.
 
 ## Notes
 

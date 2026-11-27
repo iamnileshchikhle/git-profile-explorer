@@ -40,7 +40,7 @@ function App() {
                 <div className='page-head'>
                     <header className='hero'>
                         <span className='eyebrow'>Public Record Lookup</span>
-                        <h1>Profile Viewer</h1>
+                        <h1>Git Profile Explorer</h1>
                     </header>
 
                     <ModeSwitch activeId={mode} onSelect={selectMode} />

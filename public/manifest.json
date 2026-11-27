@@ -1,6 +1,6 @@
 {
-  "short_name": "Profile Viewer",
-  "name": "Profile Viewer — Public Record Lookup",
+  "short_name": "Git Profile",
+  "name": "Git Profile Explorer — Public Record Lookup",
   "icons": [
     {
       "src": "favicon.svg",
